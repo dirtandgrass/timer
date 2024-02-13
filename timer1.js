@@ -1,10 +1,10 @@
-const Timer = require('./timer.js');
+const Timer = require('./util/Timer');
 
 
 const startTimers = function(args) {
   const timers = []; // hold the timer obj
   for (let time of args) { // loop through each arg
-    time = +time; // converrt to number
+    time = +time; // convert to number
     if (isNaN(time) || time < 0) {
       // show error message, but continue to next iteration
       console.log(`Could not set timer for ${time} seconds`);
